@@ -15,14 +15,10 @@
        http://www.springframework.org/schema/context/spring-context-3.0.xsd
        http://www.springframework.org/schema/task  
 	   http://www.springframework.org/schema/task/spring-task-3.0.xsd"
-       
-	default-lazy-init="true">
-	<bean id="magician" class="aop.Magician"></bean>
-	<bean id="volunteer" class="aop.Volunteer"></bean>
-<aop:config>
-	<aop:aspect ref="magician">
-	<aop:pointcut id="thinking" expression="execution(* aop.Thinker.thinkOfSomething(String)) and args(thoughts)"/>
-	<aop:before pointcut-ref="thinking" method="interceptThoughts" arg-names="thoughts" />
-	</aop:aspect>
-</aop:config>
+     default-lazy-init="true">
+   
+<context:component-scan base-package="bean"></context:component-scan>
+<aop:aspectj-autoproxy>
+
+</aop:aspectj-autoproxy>
 </beans>

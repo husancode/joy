@@ -15,9 +15,16 @@ public class Magician implements MindReader {
 
 	public void interceptThoughts(String thoughts) {
 		// TODO Auto-generated method stub
-		System.out.println("Intercepting volunteer's thoughts:"+thoughts);
+		System.out.println("Intercepting volunteer's thoughts:"+this.thougths);
 		this.thougths = thoughts;
 		
+	}
+	
+	public String getThougths() {
+		return thougths;
+	}
+	public void setThougths(String thougths) {
+		this.thougths = thougths;
 	}
 
 }

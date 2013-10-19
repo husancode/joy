@@ -11,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AopTest {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
 		Thinker thinker = (Thinker)context.getBean("volunteer");
 		thinker.thinkOfSomething("my thought i lost");
 		
